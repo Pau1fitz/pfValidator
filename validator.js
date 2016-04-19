@@ -20,20 +20,19 @@ var app = app || {};
 			//validate email or password
 			if (!(app.validation.email($("#email").val()) && app.validation.password($("#id").val()))) {
 
-				//prevent default event handling if the validation does not pass
-            	event.preventDefault();
+			//prevent default event handling if the validation does not pass
+            		event.preventDefault();
 		
-  				//if email address entered incorrectly show email error message
-            	if(!app.validation.email($("#email").val())){
-            		app.errorMsg.email();
-            	};
+  			//if email address entered incorrectly show email error message
+            			if(!app.validation.email($("#email").val())){
+            				app.errorMsg.email();
+            			};
 
-            	//if email password entered incorrectly show password error message
-            	if(!app.validation.password($("#id").val())) {
-            		app.errorMsg.password();
-            	};
-        	};
-		});
+            			//if email password entered incorrectly show password error message
+            			if(!app.validation.password($("#id").val())) {
+            				app.errorMsg.password();
+            			};
+			});
 
 		}
 	},
